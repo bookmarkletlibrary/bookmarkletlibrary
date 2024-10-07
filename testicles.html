@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cool Spyware :D</title>
+    <style>
+        body {
+            background-color: #808080; /* Gray background */
+            color: white; /* White text */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            overflow: hidden; /* Prevent scrollbars from appearing */
+        }
+
+        h1 {
+        margin-top: 0px;
+        margin-bottom: 10px;
+        font-family: sans-serif;
+        font-size: 6rem;
+        background: linear-gradient(to right, #ef5350, #f48fb1, #7e57c2, #2196f3, #26c6da, #43a047, #eeff41, #f9a825, #ff5722);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>cool spyware :D</h1>
+    </div>
+    <script>
+        // Function to generate a random color
+        function randomColor() {
+            const colors = ['#FF5733', '#FFBD33', '#FFFC33', '#75FF33', '#33FF57', '#33FFBD', '#33B5FF', '#3358FF', '#8A33FF', '#FF33D4'];
+            return colors[Math.floor(Math.random() * colors.length)];
+        }
+
+        // Function to create rain effect of confetti
+        function createRain() {
+            const numParticles = 100; // Number of particles to create
+            for (let i = 0; i < numParticles; i++) {
+                confetti({
+                    particleCount: 1,
+                    startVelocity: Math.random() * 20 + 10, // Random speed between 10 and 30
+                    angle: 90, // Angle to fall straight down
+                    spread: 20, // Small spread for rain effect
+                    origin: { 
+                        x: Math.random(), // Random x position (0 to 1)
+                        y: 0 // Start from the top
+                    },
+                    gravity: 3, // Gravity effect for a rain-like fall
+                    scalar: 1, // Size of particles
+                    colors: [randomColor()] // Random color for each particle
+                });
+            }
+        }
+
+        // Function to create an explosion at the cursor position
+        function createExplosion(x, y) {
+            const numParticles = 200; // Number of particles for explosion
+            for (let i = 0; i < numParticles; i++) {
+                confetti({
+                    particleCount: 1,
+                    startVelocity: Math.random() * 10 + 50, // Random speed for explosion
+                    angle: Math.random() * 360, // Random angle for spread
+                    spread: 30, // Spread of the explosion
+                    origin: { 
+                        x: x / window.innerWidth, // Normalize x to [0, 1]
+                        y: y / window.innerHeight // Normalize y to [0, 1]
+                    },
+                    gravity: 1, // Gravity for explosion effect
+                    scalar: 1.2, // Size of particles
+                    colors: [randomColor()] // Random color for each particle
+                });
+            }
+        }
+
+        // Create confetti rain at intervals
+        setInterval(createRain, 100); // Increased frequency of rain
+
+        // Event listener for mouse click
+        document.addEventListener('click', (event) => {
+            createExplosion(event.clientX, event.clientY); // Create explosion at click position
+        });
+    </script>
+</body>
+</html>
