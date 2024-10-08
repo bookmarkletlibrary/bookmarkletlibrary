@@ -1,20 +1,21 @@
 # Hello, I'm K3pz1! 👋
 
-I'm a passionate Python developer with over 6 years of experience in creating software and applications. I love turning ideas into code and solving real-world problems through technology.
+I'm a passionate Python and JavaScript developer with over 6 years of experience in creating software and applications. I love to make random projects just for fun and experience!
+I've made several games and websites.
 
 ## 🚀 My Skills
 
 - Python (Django, Flask)
 - Web Development (HTML, CSS, JavaScript)
-- Database Management (SQL, NoSQL)
+- Database Management (SQL, NoSQL, Firebase)
 - Data Analysis and Visualization (Pandas, Matplotlib, Seaborn)
-- Automation and Scripting
+- Automation and Scripting (Python)
 - Version Control (Git)
-- Linux/Unix Environments
+- Linux/Unix Environments (Ubuntu, WSL)
 
 ## 🌱 What I'm Currently Learning
 
-I'm always eager to learn and improve my skills. Currently, I'm exploring C++ and C#
+I'm always eager to learn and improve my skills. Currently, I'm exploring C++ and C#.
 
 ## 📫 Contact Me
 
